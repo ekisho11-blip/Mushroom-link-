@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mushroom Kingdom - Download</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f0f0f0; }
+        .container { text-align: center; padding: 20px; background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 90%; max-width: 400px; }
+        h1 { font-size: 1.2rem; color: #333; }
+        .btn-main { display: block; width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; text-decoration: none; }
+        .btn-app { background-color: #e91e63; color: white; }
+        .btn-music { background-color: #00d46a; color: white; }
+        /* ポップアップのスタイル */
+        #overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center; z-index: 1000; }
+        .popup { background: white; padding: 30px; border-radius: 20px; text-align: center; width: 80%; max-width: 300px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Mushroom Kingdom</h1>
+    <p>ダウンロードの準備ができました。</p>
+    <a href="https://install.page/mushroomkingdom" class="btn-main btn-app">アプリをインストールする</a>
+</div>
+
+<div id="overlay">
+    <div class="popup">
+        <h2>🎵 New Music Release!</h2>
+        <p>アプリをダウンロードする前に、私の新曲をチェックしませんか？</p>
+        <a href="https://linkco.re/U2VH9B6q?lang=en" target="_blank" class="btn-main btn-music" onclick="closePopup()">楽曲を聴く</a>
+        <button onclick="closePopup()" style="background:none; border:none; color: #999; cursor:pointer;">後で見る</button>
+    </div>
+</div>
+
+<script>
+    function closePopup() {
+        document.getElementById('overlay').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
